@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+:root {
+  --fs-50: 0.75rem;
+  --fs-base: 1rem;
+  --fs-200: 1.333rem;
+  --fs-300: 1.777rem;
+  --fs-400: 2.369rem;
+  --fs-500: 2.157rem;
+  --fs-600: 4.209rem;
+  --sp-small: calc(.75rem, 1rem, 1.333rem);
+  --sp-medium: calc(1.333rem, 2.369rem, 4.209rem);
+  --sp-large: calc(4.209rem, 9.969rem, 17.713rem);
+  --h: 218;
+  --s: 92%;
+  --c-base: hsl(var(--h) var(--s) 60%);
+  --c-text-100: hsl(var(--h) 15% 65%);
+  --c-text-200: hsl(var(--h) 15% 52%);
+  --c-text-300: hsl(var(--h) 25% 40%);
+  --c-text-400: hsl(var(--h) var(--s) 16%);
+  --c-background: hsl(var(--h), var(--s), 98%);
+  --c-background-1: hsl(var(--h), var(--s), 99%);
+}
+
+body {
+  font-size: var(--fs-base);
+  background-color: var(--c-background);
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--fs-600);
+}
+
+h2 {
+  font-size: var(--fs-500);
+}
+
+h3 {
+  font-size: var(--fs-400);
+}
+
+h4 {
+  font-size: var(--fs-300);
+}
+
+h5 {
+  font-size: var(--fs-200);
+}
+
+small,
+.text_small {
+  font-size: var(--fs-50);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__dateNTime, .card__profile, [class*=btn], button {
+  display: flex;
+  align-items: center;
+}
+
+[class*=btn], button {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 0.85rem;
+}
+
+[class*=btn], button {
+  line-height: 0;
+  cursor: pointer;
+}
+[class*=btn] svg, button svg {
+  margin-left: 5px;
+}
+
+.nav ul {
+  list-style: none;
+}
+.nav ul a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+svg {
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 340px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+}
+.card__image {
+  padding: 12px;
+}
+.card__content {
+  padding: 0 24px;
+}
+.card__tag {
+  color: var(--c-base);
+}
+.card__head {
+  font-size: var(--fs-200);
+  color: var(--c-text-400);
+  font-weight: bold;
+  padding: 10px 0 8px 0;
+  cursor: pointer;
+}
+.card__text {
+  font-size: var(--fs-base);
+  color: var(--c-text-200);
+  line-height: 1.5;
+}
+.card__profile {
+  padding: 1rem 0;
+}
+.card__profile img {
+  padding-right: 12px;
+}
+.card__author {
+  color: var(--c-text-200);
+  font-weight: 600;
+}
+.card__dateNTime {
+  color: var(--c-text-100);
+  gap: 8px;
+}
+
+.card::before {
+  content: "";
+  height: inherit;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: block;
+  background-color: var(--c-background-1);
+  will-change: transform;
+  transform: scale(1);
+  border-radius: 8px;
+  box-shadow: 0px 0px 35px rgba(140, 152, 164, 0.18);
+}
+
+.card:hover::before {
+  transform: scale(1.03);
+}
+
+/*# sourceMappingURL=style.css.map */

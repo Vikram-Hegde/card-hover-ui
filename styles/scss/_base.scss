@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+:root {
+  // Font Size Styles
+  --fs-50: 0.75rem;
+  --fs-base: 1rem;
+  --fs-200: 1.333rem;
+  --fs-300: 1.777rem;
+  --fs-400: 2.369rem;
+  --fs-500: 2.157rem;
+  --fs-600: 4.209rem;
+
+  // Spacing
+  --sp-small: calc(.75rem, 1rem, 1.333rem);
+  --sp-medium: calc(1.333rem, 2.369rem, 4.209rem);
+  --sp-large: calc(4.209rem, 9.969rem, 17.713rem);
+
+  // Color Styles - Define h and s according to the project
+  --h: 218;
+  --s: 92%;
+  --c-base: hsl(var(--h) var(--s) 60%);
+  --c-text-100: hsl(var(--h) 15% 65%);
+  --c-text-200: hsl(var(--h) 15% 52%);
+  --c-text-300: hsl(var(--h) 25% 40%);
+  --c-text-400: hsl(var(--h) var(--s) 16%);
+
+
+  //add in the range of 1,2,3 if multiple background exists
+  --c-background: hsl(var(--h), var(--s), 98%);
+  --c-background-1: hsl(var(--h), var(--s), 99%);
+}   
+
+body {
+  font-size: var(--fs-base);
+  background-color: var(--c-background);
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--fs-600);
+}
+
+h2 {
+  font-size: var(--fs-500);
+}
+
+h3 {
+  font-size: var(--fs-400);
+}
+
+h4 {
+  font-size: var(--fs-300);
+}
+
+h5 {
+  font-size: var(--fs-200);
+}
+
+small,
+.text_small {
+  font-size: var(--fs-50);
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+%sm-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 0.85rem;
+}
+
+%sm-caps--light {
+  @extend %sm-caps;
+  color: var(--fc-secondary);
+}
+
+[class*="btn"], button {
+  line-height: 0;
+  cursor: pointer;
+  @extend %align-center, %sm-caps;
+
+  svg {
+    margin-left: 5px;
+  }
+}
+
+.nav ul {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+}
+
+svg {
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+}
